@@ -26,17 +26,17 @@ export default function Categories() {
         <CategoryCard 
           activity={"Watching"}
           taskCount={12}
-          imageSource={require("../../assets/watching.png")}
+          imageSource={require("../../assets/lifting.png")}
         />        
         <CategoryCard 
           activity={"Dancing"}
           taskCount={12}
-          imageSource={require("../../assets/dancing.jpg")}
+          imageSource={require("../../assets/dancing.png")}
         />
         <CategoryCard 
           activity={"browsing"}
           taskCount={12}
-          imageSource={require("../../assets/browsing.jpg")}
+          imageSource={require("../../assets/browsing.png")}
         />
 
       </ScrollView>

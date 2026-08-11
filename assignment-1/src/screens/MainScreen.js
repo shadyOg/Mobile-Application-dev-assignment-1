@@ -1,20 +1,21 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, View, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Header from '../components/Header';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SearchBox from '../components/SearchBox';
-import SubHeader from '../components/SubHeader';
 import Categories from '../components/Categories';
+import Ongoing from '../components/Ongoing';
 
 export default function MainScreen() {
   return (
-    <SafeAreaProvider style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <ScrollView contentContainerStyle={styles.container}>
-        <Header/>
-        <SearchBox/>
-        <Categories/>
+        <Header />
+        <SearchBox />
+        <Categories />
+        <Ongoing />
       </ScrollView>
-    </SafeAreaProvider>
+    </SafeAreaView>
   );
 }
 

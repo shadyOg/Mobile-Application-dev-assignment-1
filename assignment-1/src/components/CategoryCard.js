@@ -5,7 +5,7 @@ export default function CategoryCard({activity, taskCount, imageSource}){
   return(
     <TouchableOpacity style={styles.card}>
       <Text style={styles.activity}>{activity}</Text>
-      <Text style={styles.subtitle}>{taskCount}</Text>
+      <Text style={styles.subtitle}>{taskCount} tasks</Text>
 
       <Image
         source={imageSource}
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     width: 170,
     justifyContent: 'flex-start',
     marginBottom: 25,
-    overflow: 'hidden',   // 👈 clips anything spilling past the card edges
+    overflow: 'hidden',
   },
   activity: {
     fontSize: 16,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 100,        // 👈 shrunk to actually fit remaining space
+    height: 100, 
     marginBottom: 12,
     alignSelf: 'center',
   },

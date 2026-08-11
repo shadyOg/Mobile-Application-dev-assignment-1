@@ -16,11 +16,11 @@ export default function SubHeader({title}) {
 const styles= StyleSheet.create({
   container: {
     marginTop: 25,
-    marginLeft: 20,
-    marginBottom: 2
+    marginBottom: 8,
+    marginLeft: 8
   },
   title:{
-    fontSize: 23,
+    fontSize: 18,
     fontWeight: 'bold',
     color: 'black',
   }

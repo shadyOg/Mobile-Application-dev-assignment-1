@@ -4,8 +4,7 @@ import Header from '../components/Header';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SearchBox from '../components/SearchBox';
 import SubHeader from '../components/SubHeader';
-import Categories from '../components/categories';
-
+import Categories from '../components/Categories';
 
 export default function MainScreen() {
   return (

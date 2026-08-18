@@ -1,21 +1,23 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import MainScreen from './src/screens/MainScreen';
+import WorkoutListScreen from './src/screens/WorkoutListScreen';
+import WorkoutDetailsScreen from './src/screens/WorkoutDetailsScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <MainScreen />
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="WorkoutList" component={WorkoutListScreen} />
+          <Stack.Screen name="WorkoutDetails" component={WorkoutDetailsScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fbf6f0',
-  },
-});
